@@ -4,9 +4,37 @@
 
 @import "../../data/default.scss";
 
-$padding:       30px !default;
+$padding:       0px !default;
 $grey:          $background-color !default;
 $width:         580px !default;
 $br:            3px !default;
 $btn-br:        5px !default;
 $primary-color: #348eda !default;
+
+// ==========
+// Typography
+// ==========
+$font-family:   Arial, Helvetica, sans-serif !default;
+
+// ======
+// Colors
+// ======
+$series-background-color:           #cfdec0 !default;
+$series-font-color:                 #5d9732 !default;
+
+$name-background-color:             #5d9732 !default;
+$name-font-color:                   #fff !default;
+
+$content-font-color:                #505a63 !default;
+$content-head-font-color:           #6a747c !default;
+
+$information-background-color:      #5d9732 !default;
+$information-font-color:            #fff !default;
+$information-rsvp-font-color:       #4f5557 !default;
+$information-rsvp-background-color: #ffb310 !default;
+
+$footer-background-color:           #cfdec0 !default;
+$footer-font-color:                 #6a747c !default;
+$footer-directions-font-color:      #548d2b !default;
+
+$unsub-font-color:                  #6a747c !default;

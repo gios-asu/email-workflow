@@ -1,4 +1,5 @@
 // Main scss styles
+@import 'mixins';
 @import 'variables';
 @import 'global';
 @import 'layout';
@@ -6,3 +7,4 @@
 @import 'buttons';
 @import 'other';
 @import 'responsive';
+@import 'components';

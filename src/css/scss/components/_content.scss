@@ -1,0 +1,46 @@
+.content {
+  width: percentage-to-pixels(100%);
+}
+
+.content__headshot {
+  padding: 30px 0 0 30px;
+  vertical-align: top;
+}
+
+.content__headlines {
+  padding: 30px 0 0;
+  vertical-align: top;
+}
+
+.content__headlines--headline {
+  color: $content-head-font-color;
+  font-family: $font-family;
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: -2px;
+  line-height: normal;
+  margin: 0 0 0 30px;
+  padding: 0;
+}
+
+.content__headlines--title {
+  font-style: italic;
+  font-family: $font-family;
+  color: $content-font-color;
+  font-size: 15px;
+  line-height: normal;
+  font-weight: normal;
+  margin: 3px 0 10px 30px;
+  padding: 0;
+}
+
+.content__description {
+  color: $content-font-color;
+  font-family: $font-family;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 18px;
+  margin: 0 25px 20px 30px;
+  padding: 0;
+}

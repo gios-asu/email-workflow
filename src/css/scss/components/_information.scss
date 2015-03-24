@@ -1,0 +1,56 @@
+.information {
+  background-color: $information-background-color;
+  width: percentage-to-pixels(100%); 
+}
+
+.information__details {
+  width: percentage-to-pixels(70%);
+}
+
+.information__details--datebox {
+  color: $information-font-color;
+  font-family: $font-family;
+  font-size: 27px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: normal;
+  margin: 7px 0 0 30px;
+  padding: 0;
+}
+
+.information__details--locationbox {
+  color: $information-font-color;
+  font-family: $font-family;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: normal;
+  margin: 0 0 3px 30px;
+  padding: 0;
+}
+
+.information__rsvp {
+  padding: 0;
+  text-align: right;
+  vertical-align: middle;
+  width: percentage-to-pixels(25%);
+}
+
+.information__rsvp--text {
+  background-color: $information-rsvp-background-color;
+  border-bottom: 15px solid $information-rsvp-background-color;
+  border-top: 15px solid $information-rsvp-background-color;
+  color: $information-rsvp-font-color;
+  font-family: $font-family;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: normal;
+  margin: 0px;
+  text-align: center;
+  width: percentage-to-pixels(25%);
+}
+
+.information__push {
+  background-color: $information-background-color;
+  width: percentage-to-pixels(5%);
+}

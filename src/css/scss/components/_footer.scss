@@ -1,0 +1,79 @@
+.footer {
+  background-color: $footer-background-color;
+  width: percentage-to-pixels(100%);
+}
+
+.footer__information {
+  background-color: $footer-background-color;
+  padding: 0 !important;
+}
+
+.footer__information--forward {
+  color: $footer-font-color;
+  font-family: $font-family;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: normal;
+  margin: 10px 0 7px 30px;
+  padding: 0;
+}
+
+.footer__information--forwardlink {
+  color: $footer-font-color;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.footer__information--rsvp {
+  letter-spacing: -1px;
+  font-family: $font-family;
+  color: $footer-font-color;
+  font-size: 20px;
+  line-height: normal;
+  font-weight: bold;
+  margin: 10px 0px 7px 30px;
+  padding: 0px;
+}
+
+.footer__information--rsvplink {
+  color: $footer-font-color;
+  font-size: 20px;
+  text-decoration: none;  
+}
+
+.footer__information--directions {
+  font-family: $font-family;
+  color: $footer-directions-font-color;
+  font-size: 13px;
+  line-height: normal;
+  font-weight: normal;
+  margin: 0px 10px 0px 30px;
+  padding: 0px;
+}
+
+.footer__information--directionslink {
+  color: $footer-directions-font-color;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer__information--additional {
+  @extend .footer__information--directions;
+
+  margin: 10px 0px 0px 30px;
+}
+
+.footer__information--additionallink {
+  @extend .footer__information--directionslink;
+}
+
+.footer__information--presented {
+  font-family: $font-family;
+  color: $footer-font-color;
+  font-size: 13px;
+  line-height: normal;
+  font-weight: bold;
+  margin: 12px 0px 20px 30px;
+  padding: 0px;
+}

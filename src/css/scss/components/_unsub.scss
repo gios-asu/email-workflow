@@ -1,0 +1,21 @@
+.unsub {
+  width: percentage-to-pixels(100%);
+}
+
+.unsub__text {
+  font-family: $font-family;
+  color: $unsub-font-color;
+  font-size: 12px;
+  line-height: normal;
+  font-weight: bold;
+  margin: 12px 0px 20px 5px;
+  padding: 0px;
+}
+
+.unsub__text--link {
+  font-family: $font-family;
+  color: $unsub-font-color;
+  font-size: 12px;
+  line-height: normal;
+  font-weight: bold;
+}

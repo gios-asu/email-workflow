@@ -1,0 +1,18 @@
+.name {
+  width: percentage-to-pixels(100%);
+}
+
+.name__heading {
+  background-color: $name-background-color;
+}
+
+.name__heading--text {
+  color: $name-font-color;
+  font-family: $font-family;
+  font-size: 36px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: normal;
+  margin: 10px 0px 20px 30px;
+  padding: 0px;
+}

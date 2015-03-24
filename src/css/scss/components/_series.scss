@@ -1,0 +1,31 @@
+.series {
+  background-color: $series-background-color;
+  width: percentage-to-pixels(100%);
+}
+
+.series__heading {
+  vertical-align: middle;
+  width: percentage-to-pixels(45%);
+}
+
+.series__heading--text {
+  color: $series-font-color;
+  font-family: $font-family;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: normal;
+  margin: 2px 0px 0px;
+  padding: 0px;
+}
+
+.series__logo {
+  padding: 17px 0px 16px;
+  text-align: right;
+  width: percentage-to-pixels(45%);
+}
+
+.series__push {
+  background-color: $series-background-color;
+  width: percentage-to-pixels(5%);
+}

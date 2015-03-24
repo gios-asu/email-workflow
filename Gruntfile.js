@@ -194,7 +194,7 @@ module.exports = function(grunt) {
         // See http://www.shakyshane.com/javascript/nodejs/browser-sync/2014/08/24/browser-sync-plus-grunt/
         watch: {
           scripts: {
-            files: ['src/css/scss/*','src/emails/*','src/layouts/*','src/partials/*','src/data/*'],
+            files: ['src/css/scss/**/*.scss','src/emails/*','src/layouts/*','src/partials/*','src/data/*'],
             options: {
               spawn: false
             },

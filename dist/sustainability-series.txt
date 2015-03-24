@@ -1,0 +1,38 @@
+sustainability series
+
+Global Institute of Sustainability - logo ( http://sustainability.asu.edu )
+
+%%EVENTNAME%%
+
+%%HEADLINE%%
+
+%%TITLES%%
+
+%%HEADLINE2%%
+
+%%TITLES2%%
+
+%%EVENTDESCRIPTION%%
+
+%%DATEBOX%%
+
+%%LOCATIONBOX%%
+
+RSVP Now » ( %%RSVPLINK%% )
+
+Forward to a friend » ( *|FORWARD|* )
+
+RSVP:
+sustainabilityevents@asu.edu (
+sustainabilityevents@asu.edu )
+
+Parking & directions:
+sustainability.asu.edu/directions ( http://sustainability.asu.edu/directions )
+
+Information on all events:
+sustainability.asu.edu/events ( http://sustainability.asu.edu/events/upcoming-events.php )
+
+The Sustainability Series is presented by ASU's
+Global Institute of Sustainability.
+
+Unsubscribe ( *|UNSUB|* ) *|EMAIL|* from this list.

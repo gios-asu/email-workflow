@@ -2,6 +2,10 @@
     GLOBAL RESETS
 ------------------------------------- */
 
+* {
+  padding: 0;
+}
+
 table,
 td,
 div,
@@ -30,7 +34,7 @@ body {
 // Let's make sure all tables have defaults
 table {
   -premailer-width: 100%; // This is a specific style for the premailer gem
-  border-collapse: separate !important;
+  border-collapse: collapse !important;
   mso-table-lspace:0pt;
   mso-table-rspace: 0pt;
 
