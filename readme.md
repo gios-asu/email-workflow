@@ -37,6 +37,21 @@ npm install
 grunt
 ```
 
+You can also run:
+
+```
+grunt agile
+```
+
+Which will listen to your file system for changes and refresh your browser so you can instantly
+preview your email.
+
+Note: you may need to run the following command if you receive a cryptic `Waiting...Fatal error: watch ENOSPC` error:
+
+```
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+```
+
 ### Sensitive Information
 We encourage you __not__ to store sensitive data in your git repository. If you must, please look into [git-encrypt](https://github.com/shadowhand/git-encrypt) or some other method of encrypting your configuration secrets.
 

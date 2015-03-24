@@ -1,3 +1,5 @@
+var browserSync = require('browser-sync');
+
 module.exports = function(grunt) {
 
 
@@ -92,16 +94,6 @@ module.exports = function(grunt) {
 
 
 
-        // Watches for changes to css or email templates then runs grunt tasks
-        watch: {
-          files: ['src/css/scss/*','src/emails/*','src/layouts/*','src/partials/*','src/data/*'],
-          tasks: ['default']
-        },
-
-
-
-
-
         // Use Mailgun option if you want to email the design to your inbox or to something like Litmus
         // grunt send --template=transaction.html
         mailgun: {
@@ -159,8 +151,8 @@ module.exports = function(grunt) {
             region: 'us-east-1', // feel free to change this
             headers: {
               // Two Year cache policy (1000 * 60 * 60 * 24 * 730)
-              "Cache-Control": "max-age=630720000, public",
-              "Expires": new Date(Date.now() + 63072000000).toUTCString()
+              'Cache-Control': 'max-age=630720000, public',
+              'Expires': new Date(Date.now() + 63072000000).toUTCString()
             }
           },
           dev: {
@@ -195,9 +187,38 @@ module.exports = function(grunt) {
               'ol2013', 'outlookcom', 'chromeoutlookcom', 'chromeyahoo', 'windowsphone8'] // https://#{company}.litmus.com/emails/clients.xml
             }
           }
+        },
+
+
+        // Watches for changes to css or email templates then runs grunt tasks
+        watch: {
+          scripts: {
+            files: ['src/css/scss/*','src/emails/*','src/layouts/*','src/partials/*','src/data/*'],
+            options: {
+              spawn: false
+            },
+            tasks: ['default', 'bs-inject']
+          }
         }
 
     });
+
+    grunt.registerTask('bs-init', function () {
+        var done = this.async();
+        browserSync({
+            server: './dist'
+        }, function (err, bs) {
+            done();
+        });
+    });
+    
+    /**
+     * Inject CSS
+     */
+    grunt.registerTask('bs-inject', function () {
+        browserSync.reload(['dist/*.html']);
+    });
+    
 
     // Where we tell Grunt we plan to use this plug-in.
     grunt.loadNpmTasks('grunt-contrib-sass');
@@ -211,7 +232,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-litmus');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
 
-    // Where we tell Grunt what to do when we type "grunt" into the terminal.
+    // Where we tell Grunt what to do when we type 'grunt' into the terminal.
     grunt.registerTask('default', ['sass','assemble','premailer', 'imagemin']);
 
     // Use grunt send if you want to actually send the email to your inbox
@@ -222,5 +243,8 @@ module.exports = function(grunt) {
 
     // Separate task to manually upload files to Amazon S3 bucket
     grunt.registerTask('upload', ['s3']);
+
+    // Agile workflow
+    grunt.registerTask('agile', ['bs-init', 'watch']);
 
 };

@@ -96,16 +96,16 @@ body {
 }
 
 .wrapper {
-  padding: 30px;
+  padding: 60px;
 }
 
 .content-block {
-  padding: 0 0 30px;
+  padding: 0 0 60px;
 }
 
 .header {
-  margin-bottom: 30px;
-  margin-top: 20px;
+  margin-bottom: 60px;
+  margin-top: 50px;
   width: 100%;
 }
 
