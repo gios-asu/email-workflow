@@ -19,6 +19,7 @@
     "grunt-mailgun": "0.0.3",
     "grunt-premailer": "0.2.5",
     "grunt-s3": "^0.2.0-alpha.3",
+    "grunt-shared-config": "^0.3.12",
     "imagemin-mozjpeg": "^0.1.2"
   }
 }

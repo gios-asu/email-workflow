@@ -191,6 +191,7 @@ module.exports = function(grunt) {
 
 
         // Watches for changes to css or email templates then runs grunt tasks
+        // See http://www.shakyshane.com/javascript/nodejs/browser-sync/2014/08/24/browser-sync-plus-grunt/
         watch: {
           scripts: {
             files: ['src/css/scss/*','src/emails/*','src/layouts/*','src/partials/*','src/data/*'],
@@ -199,6 +200,19 @@ module.exports = function(grunt) {
             },
             tasks: ['default', 'bs-inject']
           }
+        },
+
+        shared_config: {
+          default : {
+            options: {
+                name: "default",
+                cssFormat: "dash",
+            },
+            src: "src/data/default.yml",
+            dest: [
+                "src/data/default.scss"
+            ]
+          }
         }
 
     });
@@ -206,7 +220,10 @@ module.exports = function(grunt) {
     grunt.registerTask('bs-init', function () {
         var done = this.async();
         browserSync({
-            server: './dist'
+            server: {
+              baseDir: './dist',
+              directory: true
+            }
         }, function (err, bs) {
             done();
         });
@@ -231,9 +248,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-s3');
     grunt.loadNpmTasks('grunt-litmus');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-shared-config');
 
     // Where we tell Grunt what to do when we type 'grunt' into the terminal.
-    grunt.registerTask('default', ['sass','assemble','premailer', 'imagemin']);
+    grunt.registerTask('default', ['shared_config', 'sass','assemble','premailer', 'imagemin']);
 
     // Use grunt send if you want to actually send the email to your inbox
     grunt.registerTask('send', ['mailgun']);
@@ -245,6 +263,6 @@ module.exports = function(grunt) {
     grunt.registerTask('upload', ['s3']);
 
     // Agile workflow
-    grunt.registerTask('agile', ['bs-init', 'watch']);
+    grunt.registerTask('agile', ['bs-init', 'default', 'watch']);
 
 };
