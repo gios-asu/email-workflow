@@ -5,4 +5,4 @@ node_modules
 *.css.map
 secrets.json
 
-data/default.scss
+data/*.scss

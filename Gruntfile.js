@@ -13,6 +13,19 @@ module.exports = function(grunt) {
 
 
 
+        shared_config: {
+          event : {
+            options: {
+                name: "default",
+                cssFormat: "dash"
+            },
+            src: "src/data/event.yml",
+            dest: [
+                "src/data/event.scss"
+            ]
+          }
+        },
+
 
 
         // Takes your scss files and compiles them to css
@@ -200,21 +213,7 @@ module.exports = function(grunt) {
             },
             tasks: ['default', 'bs-inject']
           }
-        },
-
-        shared_config: {
-          default : {
-            options: {
-                name: "default",
-                cssFormat: "dash",
-            },
-            src: "src/data/default.yml",
-            dest: [
-                "src/data/default.scss"
-            ]
-          }
         }
-
     });
 
     grunt.registerTask('bs-init', function () {
