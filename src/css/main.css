@@ -300,6 +300,7 @@ a {
 }
 
 .series__heading {
+  background-color: #cfdec0;
   vertical-align: middle;
   width: 261px;
 }
@@ -316,6 +317,7 @@ a {
 }
 
 .series__logo {
+  background-color: #cfdec0;
   padding: 17px 0px 16px;
   text-align: right;
   width: 261px;
@@ -352,11 +354,13 @@ a {
 .content__headshot {
   padding: 30px 0 0 30px;
   vertical-align: top;
+  width: 116px;
 }
 
 .content__headlines {
   padding: 30px 0 0;
   vertical-align: top;
+  width: 464px;
 }
 
 .content__headlines--headline {
@@ -392,12 +396,28 @@ a {
   padding: 0;
 }
 
+.content__description * {
+  color: #505a63;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.content__description p {
+  color: #505a63;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 18px;
+  padding: 0;
+}
+
 .information {
   background-color: #5d9732;
   width: 580px;
 }
 
 .information__details {
+  background-color: #5d9732;
   width: 406px;
 }
 
@@ -423,6 +443,7 @@ a {
 }
 
 .information__rsvp {
+  background-color: #5d9732;
   padding: 0;
   text-align: right;
   vertical-align: middle;
@@ -442,6 +463,10 @@ a {
   margin: 0px;
   text-align: center;
   width: 145px;
+}
+
+.information__rsvp--textlink {
+  color: #4f5557;
 }
 
 .information__push {

@@ -5,11 +5,13 @@
 .content__headshot {
   padding: 30px 0 0 30px;
   vertical-align: top;
+  width: percentage-to-pixels(20%);
 }
 
 .content__headlines {
   padding: 30px 0 0;
   vertical-align: top;
+  width: percentage-to-pixels(80%);
 }
 
 .content__headlines--headline {
@@ -42,5 +44,20 @@
   font-weight: normal;
   line-height: 18px;
   margin: 0 25px 20px 30px;
+  padding: 0;
+}
+
+.content__description * {
+  color: $content-font-color;
+  font-family: $font-family;
+}
+
+.content__description p {
+  color: $content-font-color;
+  font-family: $font-family;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 18px;
   padding: 0;
 }

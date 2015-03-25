@@ -1,0 +1,33 @@
+site_url: "http://sustainability.asu.edu"
+site_title: "Arizona State University - Global Institute of Sustainability"
+site_logo_url: "http://sustainability.asu.edu/docs/gios/emails/sustainability-series/2010/imgs/gios-logo.jpg"
+
+series_title: "sustainability series"
+series_banner_url: "http://placehold.it/580x92"
+
+event_name: "This is the Default Event Name"
+event_headliners:
+  - headshot_url: "http://placehold.it/100x100"
+    headline: "Default Headline"
+    title: "Default Title"
+  - headshot_url: "http://placehold.it/100x100"
+    headline: "Default Headline 2"
+    title: "Default Title 2"
+event_description:
+  >
+    This is the Default Event Description.
+    <ul>
+      <li>Lists!</li>
+      <li>Now included!</li>
+    <ul>
+    <h1>Even headings!<h1>
+    <p>Make sure to use p-tags!</p>
+event_date:
+  >
+    This is the date<br/>
+    It is multi-line
+event_location:
+  >
+    This is the location<br/>
+    It is multi-line
+event_url: ""

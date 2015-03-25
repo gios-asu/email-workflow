@@ -11,11 +11,11 @@ subject: Sustainability Series
           <td class="series__push">
           </td>
           <td class="series__heading">
-            <p class="series__heading--text">sustainability series</p>
+            <p class="series__heading--text">{{event.series_title}}</p>
           </td>
           <td class="series__logo">
-            <a href="http://sustainability.asu.edu" title="Arizona State University - Global Institute of Sustainability" target="_blank">
-              <img alt="Global Institute of Sustainability - logo" title="Arizona State University - Global Institute of Sustainability" src="http://sustainability.asu.edu/docs/gios/emails/sustainability-series/2010/imgs/gios-logo.jpg" border="0">
+            <a href="{{event.site_url}}" title="{{event.site_title}}" target="_blank">
+              <img alt="{{event.site_title}} - logo" title="{{event.site_title}}" src="{{event.site_logo_url}}" border="0">
             </a>
           </td>
           <td class="series__push">
@@ -28,32 +28,36 @@ subject: Sustainability Series
         <tr>
           <td class="name__heading">
             <p class="name__heading--text">
-              %%EVENTNAME%%
+              {{event.event_name}}
             </p>
           </td>
         </tr>
         <tr>
           <td>
-            <img src="http://sustainability.asu.edu/docs/gios/emails/sustainability-series/2010/imgs/sustainability-series-header.jpg">
+            <img src="{{event.series_banner_url}}">
           </td>
         </tr>
       </table>
       <!--/EVENT NAME -->
       <!-- CONTENT -->
       <table class="content">
+        {{#each event.event_headliners}}
         <tr>
           <td class="content__headshot">
-            <img src="%%HEADSHOTIMG%%">
+            <img src="{{headshot_url}}">
           </td>
           <td class="content__headlines">
-            <p class="content__headlines--headline">%%HEADLINE%%</p>
-            <p class="content__headlines--title">%%TITLES%%</p>
-    
-            <p class="content__headlines--headline">%%HEADLINE2%%</p>
-            <p class="content__headlines--title">%%TITLES2%%</p>
-
+            <p class="content__headlines--headline">{{headline}}</p>
+            <p class="content__headlines--title">{{title}}</p>
+          </td>
+        </tr>
+        {{/each}}
+      </table>
+      <table class="content">
+        <tr>
+          <td>
             <div class="content__description">
-              %%EVENTDESCRIPTION%%
+              {{{event.event_description}}}
             </div>
           </td>
         </tr>
@@ -63,12 +67,12 @@ subject: Sustainability Series
       <table class="information">
         <tr>
           <td class="information__details">
-            <p class="information__details--datebox">%%DATEBOX%%</p>
-            <p class="information__details--locationbox">%%LOCATIONBOX%%</p>
+            <p class="information__details--datebox">{{{event.event_date}}}</p>
+            <p class="information__details--locationbox">{{{event.event_location}}}</p>
           </td>
           <td class="information__rsvp">
             <p class="information__rsvp--text">
-              <a style="color:#4F5557;" href="%%RSVPLINK%%">RSVP Now &raquo;</a>
+              <a class="information__rsvp--textlink" href="{{event.event_url}}">RSVP Now &raquo;</a>
             </p>
           </td>
           <td class="information__push">

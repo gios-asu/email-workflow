@@ -4,6 +4,7 @@
 }
 
 .information__details {
+  background-color: $information-background-color;
   width: percentage-to-pixels(70%);
 }
 
@@ -29,6 +30,7 @@
 }
 
 .information__rsvp {
+  background-color: $information-background-color;
   padding: 0;
   text-align: right;
   vertical-align: middle;
@@ -48,6 +50,10 @@
   margin: 0px;
   text-align: center;
   width: percentage-to-pixels(25%);
+}
+
+.information__rsvp--textlink {
+  color: $information-rsvp-font-color; 
 }
 
 .information__push {

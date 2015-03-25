@@ -1,24 +1,32 @@
 sustainability series
 
-Global Institute of Sustainability - logo ( http://sustainability.asu.edu )
+Arizona State University - Global Institute of
+Sustainability - logo ( http://sustainability.asu.edu )
 
-%%EVENTNAME%%
+This is the Default Event Name
 
-%%HEADLINE%%
+Default Headline
 
-%%TITLES%%
+Default Title
 
-%%HEADLINE2%%
+Default Headline 2
 
-%%TITLES2%%
+Default Title 2
 
-%%EVENTDESCRIPTION%%
+This is the Default Event Description. * Lists!
+* Now included!
 
-%%DATEBOX%%
+**************
+Even headings!
+**************
 
-%%LOCATIONBOX%%
+Make sure to use p-tags!
 
-RSVP Now » ( %%RSVPLINK%% )
+This is the date It is multi-line
+
+This is the location It is multi-line
+
+RSVP Now » ( )
 
 Forward to a friend » ( *|FORWARD|* )
 

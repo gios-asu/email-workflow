@@ -4,6 +4,7 @@
 }
 
 .series__heading {
+  background-color: $series-background-color;
   vertical-align: middle;
   width: percentage-to-pixels(45%);
 }
@@ -20,6 +21,7 @@
 }
 
 .series__logo {
+  background-color: $series-background-color;
   padding: 17px 0px 16px;
   text-align: right;
   width: percentage-to-pixels(45%);
