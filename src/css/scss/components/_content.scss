@@ -19,7 +19,7 @@
 .content__headlines {
   background: $content-background-color;
   padding: 30px 0 0;
-  vertical-align: top;
+  vertical-align: middle;
   width: percentage-to-pixels(70%);
 }
 
@@ -54,11 +54,11 @@
   vertical-align: top;
 }
 
-.content__description--text * {
+.content__description--text :not(a) {
   color: $content-font-color;
   font-family: $font-family;
-  color:#505050;
-  padding:0px;
+  color: $content-font-color;
+  padding: 0px;
 }
 
 .content__description--text p {
@@ -67,5 +67,5 @@
   font-style: normal;
   font-weight: normal;
   line-height: 18px;
-  font-size:15px;
+  font-size: 15px;
 }

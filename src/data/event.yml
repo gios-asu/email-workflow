@@ -6,29 +6,27 @@ series_title: "Sustainability Series"
 series_banner_url: "http://placehold.it/578x92"
 series_footer_banner_url: "http://placehold.it/578x92"
 
-event_name: "This is the Default Event Name"
+event_name: "The Garden Pool Story"
 event_headliners:
-  - headshot_url: "http://placehold.it/100x100"
-    headline: "Default Headline"
-    title: "Default Title"
-  - headshot_url: "http://placehold.it/100x100"
-    headline: "Default Headline 2"
-    title: "Default Title 2"
+  - headshot_url: "https://schoolofsustainability.asu.edu/docs/gios//events/sustainability-series/2015/dennis-mcclung/headshot.jpg"
+    headline: "Dennis McClung"
+    title: "President and Founder of Garden Pool, NPO"
+  - headshot_url: "https://schoolofsustainability.asu.edu/docs/gios//events/sustainability-series/2015/dennis-mcclung/headshot.jpg"
+    headline: "Dennis McClung"
+    title: "President and Founder of Garden Pool, NPO"
 event_description:
   >
-    This is the Default Event Description.
-    <ul>
-      <li>Lists!</li>
-      <li>Now included!</li>
-    <ul>
-    <h1>Even headings!<h1>
-    <p>Make sure to use p-tags!</p>
+    In 2009, Dennis McClung bought his first home in Mesa; it came with a big, broken pool. He converted the empty pool into a closed-loop, food-producing urban greenhouse. In the process, he inspired a community and created a nonprofit organization dedicated to researching and teaching sustainable ways of growing food.<br><br>
+
+    In this talk, McClung will tell the story of <a href="http://gardenpool.org/" target="_blank">Garden Pool</a> and how a single idea can transform the way we think about growing food.<br><br>
+
+    Lunch will be provided.
 event_date:
   >
-    This is the date<br/>
-    It is multi-line
+    Thursday, April 2, 2015<br/>
+    12:00 - 1:15 p.m.
 event_location:
   >
-    This is the location<br/>
-    It is multi-line
-event_url: "http://sustainability.asu.edu/events"
+    Wrigley Hall, Room 481<br/>
+    Arizona State University, Tempe campus
+event_url: "https://schoolofsustainability.asu.edu/events/rsvp/dennis-mcclung/"

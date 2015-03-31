@@ -1,7 +1,4 @@
 /* -------------------------------------
-    CONFIGURE YOUR VARIABLES
-------------------------------------- */
-/* -------------------------------------
     GLOBAL RESETS
 ------------------------------------- */
 * {
@@ -182,45 +179,8 @@ ol li {
 }
 
 a {
-  color: #edf1e9;
+  color: #548d2b;
   text-decoration: underline;
-}
-
-/* -------------------------------------
-    BUTTONS
-------------------------------------- */
-.btn {
-  margin-bottom: 15px;
-  width: auto;
-  -premailer-width: auto;
-}
-.btn td {
-  background-color: #fff;
-  border-radius: 5px;
-  text-align: center;
-}
-.btn a {
-  background-color: #fff;
-  border: solid 1px #5d9732;
-  border-radius: 5px;
-  color: #5d9732;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 14px;
-  font-weight: bold;
-  margin: 0;
-  padding: 12px 25px;
-  text-decoration: none;
-  text-transform: capitalize;
-}
-
-.btn-primary td {
-  background-color: #5d9732;
-}
-.btn-primary a {
-  background-color: #5d9732;
-  border-color: #5d9732;
-  color: #fff;
 }
 
 /* -------------------------------------
@@ -381,7 +341,7 @@ a {
 .content__headlines {
   background: #fff;
   padding: 30px 0 0;
-  vertical-align: top;
+  vertical-align: middle;
   width: 406px;
 }
 
@@ -416,7 +376,7 @@ a {
   vertical-align: top;
 }
 
-.content__description--text * {
+.content__description--text :not(a) {
   color: #505050;
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   color: #505050;
@@ -437,7 +397,7 @@ a {
 }
 
 .information__datebox, .information__locationbox {
-  color: #6f6f6f;
+  color: #6a747c;
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-size: 20px;
   font-weight: bold;

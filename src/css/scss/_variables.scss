@@ -1,46 +1,51 @@
-/* -------------------------------------
-    CONFIGURE YOUR VARIABLES
-------------------------------------- */
-
-//@import "../../data/event.scss";
-
+// ===================
+// Default Email Width
+// ===================
 $width:         580px !default;
-$br:            3px !default;
-$btn-br:        5px !default;
 
 // ==========
 // Typography
 // ==========
 $font-family:   'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif !default;
 
+// ===================
+// Overrideable Colors
+// ===================
+
+// The defaults are the Sustainability Series colors
+$background-color:                  #edf1e9 !default;
+$email__border-color:               #c2d4b5 !default;
+$email__background-color:           #fff !default;
+$email__background-color--light:    #e7efe1 !default;
+$email__background-color--readible: #505050 !default;
+$email__primary-color:              #5d9732 !default;
+$email__primary-color--readible:    #fff !default;
+$email__accent-color:               #6a747c !default;
+$email__link-color:                 #548d2b !default;
+
 // ======
 // Colors
 // ======
-$background-color:                  #edf1e9 !default;
-$border-color:                      #c2d4b5 !default;
-$primary-accent-color:              #5d9732 !default;
-$primary-accent-font-color:         #fff !default;
-$secondary-accent-color:            #cfdec0 !default;
+$series-background-color:           $email__background-color !default;
+$series-font-color:                 $email__primary-color !default;
 
-$series-background-color:           #fff !default;
-$series-font-color:                 $primary-accent-color !default;
+$name-background-color:             $email__primary-color !default;
+$name-font-color:                   $email__primary-color--readible !default;
 
-$name-background-color:             $primary-accent-color !default;
-$name-font-color:                   $primary-accent-font-color !default;
+$content-background-color:          $email__background-color !default;
+$content-font-color:                $email__background-color--readible !default;
+$content-head-font-color:           $email__accent-color !default;
+$content-image-border-color:        $email__primary-color !default;
 
-$content-background-color:          #fff !default;
-$content-font-color:                #505050 !default;
-$content-head-font-color:           #6a747c !default;
-$content-image-border-color:        $primary-accent-color !default;
+$information-rsvp-font-color:       $email__primary-color--readible !default;
+$information-rsvp-background-color: $email__primary-color !default;
 
-$information-background-color:      #fff !default;
-$information-font-color:            #6f6f6f !default;
-$information-rsvp-font-color:       #fff !default;
-$information-rsvp-background-color: $primary-accent-color !default;
+$information-background-color:      $email__background-color !default;
+$information-font-color:            $email__accent-color !default;
 
-$footer-background-color:           #e7efe1 !default;
-$footer-font-color:                 #6a747c !default;
-$footer-link-color:                 #548d2b !default;
+$footer-background-color:           $email__background-color--light !default;
+$footer-font-color:                 $email__accent-color !default;
+$footer-link-color:                 $email__link-color !default;
 
-$unsub-font-color:                  #6a747c !default;
-$unsub-link-color:                  #548d2b !default;
+$unsub-font-color:                  $email__accent-color !default;
+$unsub-link-color:                  $email__link-color !default;
