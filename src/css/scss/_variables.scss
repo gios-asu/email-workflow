@@ -12,16 +12,48 @@ $font-family:   'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif !def
 // Overrideable Colors
 // ===================
 
+// Example Sustainability After School Colors
+// $background-color:                        #fff;
+// $email__border-color:                     #fff;
+// $email__background-color--light:          #ffb310;
+// $email__background-color--readible:       #4f5557;
+// $email__background-color--readible-light: #4f5557;
+// $email__primary-color:                    #903;
+// $email__link-color:                       #903;
+// $series-background-color:                 #ffb310;
+// $content-image-border-color:              #ccc;
+// $information-rsvp-background-color:       #903;
+
+// Example Wrigley Lecture Colors
+// $background-color:                        #e8e8e8;
+// $email__border-color:                     #fcce6d;
+// $email__background-color--light:          #f0f0f0;
+// $email__primary-color:                    #6b747c;
+// $email__link-color:                       #903;
+// $information-rsvp-background-color:       #903;
+
+// Example LightWorks Colors
+// $background-color:                        #fcf8f0;
+// $email__border-color:                     #efc978;
+// $email__background-color--light:          #fdf5e5;
+// $email__primary-color:                    #ffb310;
+// $email__link-color:                       #eca100;
+
+// Example Sustainability At ASU Colors
 // The defaults are the Sustainability Series colors
 $background-color:                  #edf1e9 !default;
 $email__border-color:               #c2d4b5 !default;
-$email__background-color:           #fff !default;
 $email__background-color--light:    #e7efe1 !default;
-$email__background-color--readible: #505050 !default;
 $email__primary-color:              #5d9732 !default;
-$email__primary-color--readible:    #fff !default;
-$email__accent-color:               #6a747c !default;
 $email__link-color:                 #548d2b !default;
+
+// =======================
+// Less commonly overriden
+// =======================
+$email__background-color:                 #fff !default;
+$email__background-color--readible:       #505050 !default;
+$email__primary-color--readible:          #fff !default;
+$email__background-color--readible-light: #6a747c !default;
 
 // ======
 // Colors
@@ -34,18 +66,18 @@ $name-font-color:                   $email__primary-color--readible !default;
 
 $content-background-color:          $email__background-color !default;
 $content-font-color:                $email__background-color--readible !default;
-$content-head-font-color:           $email__accent-color !default;
+$content-head-font-color:           $email__background-color--readible-light !default;
 $content-image-border-color:        $email__primary-color !default;
 
 $information-rsvp-font-color:       $email__primary-color--readible !default;
 $information-rsvp-background-color: $email__primary-color !default;
 
 $information-background-color:      $email__background-color !default;
-$information-font-color:            $email__accent-color !default;
+$information-font-color:            $email__background-color--readible-light !default;
 
 $footer-background-color:           $email__background-color--light !default;
-$footer-font-color:                 $email__accent-color !default;
+$footer-font-color:                 $email__background-color--readible-light !default;
 $footer-link-color:                 $email__link-color !default;
 
-$unsub-font-color:                  $email__accent-color !default;
+$unsub-font-color:                  $email__background-color--readible-light !default;
 $unsub-link-color:                  $email__link-color !default;

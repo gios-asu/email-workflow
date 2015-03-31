@@ -5,6 +5,8 @@ site_logo_url: "http://sustainability.asu.edu/docs/gios/events/templates/images/
 series_title: "Sustainability Series"
 series_banner_url: "http://placehold.it/578x92"
 series_footer_banner_url: "http://placehold.it/578x92"
+series_twitter: "@ASUgreen"
+series_twitter_url: "http://twitter.com/asugreen"
 
 event_name: "The Garden Pool Story"
 event_headliners:

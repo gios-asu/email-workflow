@@ -120,12 +120,14 @@
                 <tr>
                   <td class="unsub">            
                     <p class="unsub__sustainability">
-                      <a class="unsub__sustainability--link" href="http://sustainability.asu.edu">sustainability.asu.edu</a>
+                      <a class="unsub__sustainability--link" href="{{event.site_url}}">{{event.site_url}}</a>
                     </p>
                     
+                    {{#if event.series_twitter}}
                     <p class="unsub__twitter">
-                      <a class="unsub__twitter--link" href="http://twitter.com/asugreen">Follow us on Twitter @ASUgreen</a>
+                      <a class="unsub__twitter--link" href="{{event.series_twitter_url}}">Follow us on Twitter {{event.series_twitter}}</a>
                     </p>
+                    {{/if}}
                     
                     <p class="unsub__unsubscribe"> 
                       <a class="unsub__unsubscribe--link"  href="*|UNSUB|*"><unsubscribe>unsubscribe</unsubscribe></a> from event notifications 
