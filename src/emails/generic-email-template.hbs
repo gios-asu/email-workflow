@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>{{ event.event_name }}</title>
+<link href="../src/css/main.css" media="all" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<table class="body">
+  <tr>
+    <td></td>
+    <td class="container">
+      <div class="email-content">
+        <!-- ======== EMAIL ======== -->
+        <table class="wrapper">
+          <tr>
+            <td></td>  
+            <td class="main" align="center">
+              <!-- BORDER WRAPPER -->
+              <table class="table-wrapper">
+                <!-- SERIES -->
+                <tr class="series__logo">
+                  <td class="series__logo--wrapper" align="center">
+                    <img class="series__logo--image" alt="{{site_title}} Logo" src="{{event.site_logo_url}}"> 
+                  </td>
+                </tr>
+              
+                <tr class="series__heading">
+                  <td class="series__heading--wrapper" align="center">
+                    <p class="series__heading--text">{{event.series_title}}</p>
+                  </td>
+                </tr>
+                <!--/SERIES -->
+                <!-- NAME -->
+                <tr class="name">
+                  <td class="name__heading">
+                    <p class="name__heading--text" align="center">{{event.event_name}}</p>
+                  </td>
+                </tr>
+                <!--/NAME-->
+                <!-- SERIES BANNER -->
+                {{#if event.series_banner_url}}
+                <tr>
+                  <td class="series__banner">
+                    <img alt="{{series_title}} Image"  src="{{event.series_banner_url}}" border="0" >
+                  </td>
+                </tr>
+                {{/if}}
+                <!-- SERIES BANNER -->
+                <!-- CONTENT -->
+                <tr>            
+                  <td style="vertical-align: top;" valign="top">
+                    <table class="content">
+                      <!-- HEADLINERS -->
+                      {{#each event.event_headliners}}
+                      <tr>
+                        <td class="content__headshot">
+                          <img class="content__headshot--image" alt="Headshot Image" src="{{headshot_url}}">
+                        </td>
+                        <td class="content__headlines">
+                          <p class="content__headlines--headline">{{headline}}</p>
+                          <p class="content__headlines--title">{{title}}</p>
+                        </td>
+                      </tr>
+                      {{/each}}
+                      <!--/HEADLINERS -->
+                    </table>
+                  </td>                     
+                </tr>
+                <tr>
+                  <td class="content__description">
+                    <div class="content__description--text">{{{event.event_description}}}</div>
+                  </td>
+                </tr>
+                <!--/CONTENT-->
+                <!-- INFORMATION -->        
+                <tr>
+                  <td class="information">
+                    <p class="information__datebox">{{{event.event_date}}}</p>
+                    <p class="information__locationbox">{{{event.event_location}}}</p>
+
+                    {{#if event.event_url}}
+                    <p class="information__rsvp">
+                      <a class="information__rsvp--link" href="{{event.event_url}}">RSVP Now  &raquo;</a>  
+                    </p>
+                    {{/if}}
+                  </td>
+                </tr>
+                <!--/INFORMATION -->
+                <!-- FOOTER -->
+                <tr class="footer">
+                  <td class="footer__information">
+                    <p class="footer__information--forward">
+                      <a class="footer__information--forwardlink" href="*|FORWARD|*" target="_blank">Forward to a friend &raquo;</a>
+                    </p>
+                    <p class="footer__information--events">
+                      Information on all events: 
+                      <a class="footer__information--eventslink" href="http://sustainability.asu.edu/events/upcoming-events.php">sustainability.asu.edu/events</a>
+                    </p>
+                    <p class="footer__information--directions">
+                      Directions to Wrigley Hall: 
+                      <a class="footer__information--directionslink" href="http://sustainability.asu.edu/directions">sustainability.asu.edu/directions</a>
+                    </p>
+                    <p class="footer__information--presented">Presented by the Julie Ann Wrigley Global Institute of Sustainability.</p>
+                  </td> 
+                </tr>
+
+                {{#if event.series_footer_banner_url}}
+                <tr>
+                  <td class="footer__banner">
+                    <img src="{{event.series_footer_banner_url}}" alt="Logo" border="0"/>
+                  </td>
+                </tr>
+                {{/if}}
+                <!--/FOOTER -->
+                <!-- UNSUB -->                
+                <tr>
+                  <td class="unsub">            
+                    <p class="unsub__sustainability">
+                      <a class="unsub__sustainability--link" href="http://sustainability.asu.edu">sustainability.asu.edu</a>
+                    </p>
+                    
+                    <p class="unsub__twitter">
+                      <a class="unsub__twitter--link" href="http://twitter.com/asugreen">Follow us on Twitter @ASUgreen</a>
+                    </p>
+                    
+                    <p class="unsub__unsubscribe"> 
+                      <a class="unsub__unsubscribe--link"  href="*|UNSUB|*"><unsubscribe>unsubscribe</unsubscribe></a> from event notifications 
+                    </p>           
+                  </td>
+                </tr>
+                <!--/UNSUB -->
+              </table>
+            </td>
+            <td></td>
+          </tr>
+        </table>
+        <!--/======== EMAIL ======== -->
+      </div>
+    </td>
+    <td></td>
+  </tr>
+</table>
+
+</body>
+</html>

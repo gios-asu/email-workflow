@@ -3,7 +3,14 @@
 ------------------------------------- */
 
 * {
+  font-family: $font-family;
+  margin: 0;
   padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 15px;
 }
 
 table,
@@ -19,7 +26,6 @@ img {
 }
 
 body {
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   font-size: 14px;
   height: 100% !important;

@@ -1,21 +1,42 @@
+
 .unsub {
-  width: percentage-to-pixels(100%);
+  background: #fff;
 }
 
-.unsub__text {
-  font-family: $font-family;
+.unsub__sustainability {
+  margin: 18px 0px 0px 0px;
+  text-align: center;
+}
+
+.unsub__sustainability--link {
+  color: $unsub-link-color;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.unsub__twitter {
+  text-align: center;
+}
+
+.unsub__twitter--link {
+  color: $unsub-link-color;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.unsub__unsubscribe {
   color: $unsub-font-color;
   font-size: 12px;
   line-height: normal;
   font-weight: bold;
   margin: 12px 0px 20px 5px;
   padding: 0px;
+  text-align: center;
 }
 
-.unsub__text--link {
-  font-family: $font-family;
-  color: $unsub-font-color;
-  font-size: 12px;
-  line-height: normal;
-  font-weight: bold;
+.unsub__unsubscribe--link {
+  color: #999;
+  text-decoration: underline;
 }

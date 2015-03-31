@@ -1,32 +1,8 @@
 var browserSync = require('browser-sync');
 
 module.exports = function(grunt) {
-
-
-
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-
-        // secrets.json is ignored in git because it contains sensitive data
-        // See the README for configuration settings
-        secrets: grunt.file.readJSON('secrets.json'),
-
-
-
-        shared_config: {
-          event : {
-            options: {
-                name: "default",
-                cssFormat: "dash"
-            },
-            src: "src/data/event.yml",
-            dest: [
-                "src/data/event.scss"
-            ]
-          }
-        },
-
-
 
         // Takes your scss files and compiles them to css
         sass: {
@@ -39,9 +15,6 @@ module.exports = function(grunt) {
             }
           }
         },
-
-
-
 
 
         // Assembles your email content with html layout
@@ -57,9 +30,6 @@ module.exports = function(grunt) {
             dest: 'dist/'
           }
         },
-
-
-
 
 
         // Inlines your css
@@ -88,126 +58,11 @@ module.exports = function(grunt) {
         },
 
 
-
-        // Optimize images
-        imagemin: {
-          dynamic: {
-            options: {
-              optimizationLevel: 3,
-              svgoPlugins: [{ removeViewBox: false }]
-            },
-            files: [{
-              expand: true,
-              cwd: 'src/img',
-              src: ['**/*.{png,jpg,gif}'],
-              dest: 'dist/img'
-            }]
-          }
-        },
-
-
-
-        // Use Mailgun option if you want to email the design to your inbox or to something like Litmus
-        // grunt send --template=transaction.html
-        mailgun: {
-          mailer: {
-            options: {
-              key: '<%= secrets.mailgun.api_key %>', // See README for secrets.json or replace this with your own key
-              sender: '<%= secrets.mailgun.sender %>', // See README for secrets.json or replace this with your preferred sender
-              recipient: '<%= secrets.mailgun.recipient %>', // See README for secrets.json or replace this with your preferred recipient
-              subject: 'This is a test email'
-            },
-            src: ['dist/'+grunt.option('template')]
-          }
-        },
-
-
-
-
-
-        // Use Rackspace Cloud Files if you're using images in your email
-        cloudfiles: {
-          prod: {
-            'user': '<%= secrets.cloudfiles.user %>', // See README for secrets.json or replace this with your user
-            'key': '<%= secrets.cloudfiles.key %>', // See README for secrets.json or replace this with your own key
-            'region': '<%= secrets.cloudfiles.region %>', // See README for secrets.json or replace this with your region
-            'upload': [{
-              'container': '<%= secrets.cloudfiles.container %>', // See README for secrets.json or replace this with your container name
-              'src': 'src/img/*',
-              'dest': '/',
-              'stripcomponents': 0
-            }]
-          }
-        },
-
-        // CDN will replace local paths with your Cloud CDN path
-        cdn: {
-          options: {
-            cdn: '<%= secrets.cloudfiles.uri %>', // See README for secrets.json or replace this with your cdn uri
-            flatten: true,
-            supportedTypes: 'html'
-          },
-          dist: {
-            cwd: './dist/',
-            dest: './dist/',
-            src: ['*.html']
-          }
-        },
-
-
-        // Use Amazon S3 for images
-        s3: {
-          options: {
-            key: '<%= secrets.s3.key %>', // define this in secrets.json
-            secret: '<%= secrets.s3.secret %>', // define this in secrets.json
-            access: 'public-read',
-            region: 'us-east-1', // feel free to change this
-            headers: {
-              // Two Year cache policy (1000 * 60 * 60 * 24 * 730)
-              'Cache-Control': 'max-age=630720000, public',
-              'Expires': new Date(Date.now() + 63072000000).toUTCString()
-            }
-          },
-          dev: {
-            options: {
-              maxOperations: 20,
-              bucket: 'BUCKET-NAME' // define this
-            },
-            upload: [
-              {
-                src: 'dist/**/*',
-                dest: 'public/emails/', // define this
-                rel: 'dist', // rel must be set to maintain directory structure of src
-                options: { gzip: true }
-              }
-            ]
-          }
-        },
-
-
-        // Send your email template to Litmus for testing
-        // grunt litmus --template=transaction.html
-        litmus: {
-          test: {
-            src: ['dist/'+grunt.option('template')],
-            options: {
-              username: '<%= secrets.litmus.username %>', // See README for secrets.json or replace this with your username
-              password: '<%= secrets.litmus.password %>', // See README for secrets.json or replace this with your password
-              url: 'https://<%= secrets.litmus.company %>.litmus.com', // See README for secrets.json or replace this with your company url
-              clients: ['android4', 'aolonline', 'androidgmailapp', 'aolonline', 'ffaolonline',
-              'chromeaolonline', 'appmail6', 'iphone6', 'ipadmini', 'ipad', 'chromegmailnew',
-              'iphone6plus', 'notes85', 'ol2002', 'ol2003', 'ol2007', 'ol2010', 'ol2011',
-              'ol2013', 'outlookcom', 'chromeoutlookcom', 'chromeyahoo', 'windowsphone8'] // https://#{company}.litmus.com/emails/clients.xml
-            }
-          }
-        },
-
-
         // Watches for changes to css or email templates then runs grunt tasks
         // See http://www.shakyshane.com/javascript/nodejs/browser-sync/2014/08/24/browser-sync-plus-grunt/
         watch: {
           scripts: {
-            files: ['src/css/scss/**/*.scss','src/emails/*','src/layouts/*','src/partials/*','src/data/*'],
+            files: ['src/css/scss/**/*.scss','src/emails/*','src/data/*'],
             options: {
               spawn: false
             },
@@ -239,27 +94,12 @@ module.exports = function(grunt) {
     // Where we tell Grunt we plan to use this plug-in.
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('assemble');
-    grunt.loadNpmTasks('grunt-mailgun');
     grunt.loadNpmTasks('grunt-premailer');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-cloudfiles');
-    grunt.loadNpmTasks('grunt-cdn');
-    grunt.loadNpmTasks('grunt-s3');
-    grunt.loadNpmTasks('grunt-litmus');
-    grunt.loadNpmTasks('grunt-contrib-imagemin');
-    grunt.loadNpmTasks('grunt-shared-config');
 
     // Where we tell Grunt what to do when we type 'grunt' into the terminal.
-    grunt.registerTask('default', ['shared_config', 'sass','assemble','premailer', 'imagemin']);
+    grunt.registerTask('default', ['sass','assemble','premailer']);
 
-    // Use grunt send if you want to actually send the email to your inbox
-    grunt.registerTask('send', ['mailgun']);
-
-    // Upload images to our CDN on Rackspace Cloud Files
-    grunt.registerTask('cdnify', ['default','cloudfiles','cdn']);
-
-    // Separate task to manually upload files to Amazon S3 bucket
-    grunt.registerTask('upload', ['s3']);
 
     // Agile workflow
     grunt.registerTask('agile', ['bs-init', 'default', 'watch']);

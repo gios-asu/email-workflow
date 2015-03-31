@@ -1,33 +1,38 @@
-.series {
-  background-color: $series-background-color;
-  width: percentage-to-pixels(100%);
+.series__heading {
 }
 
-.series__heading {
-  background-color: $series-background-color;
-  vertical-align: middle;
-  width: percentage-to-pixels(45%);
+.series__heading--wrapper {
+  background: $series-background-color;
+  vertical-align: top;
 }
 
 .series__heading--text {
   color: $series-font-color;
-  font-family: $font-family;
-  font-size: 28px;
+  font-size: 40px;
   font-weight: bold;
   letter-spacing: -1px;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 18px;
   line-height: normal;
-  margin: 2px 0px 0px;
-  padding: 0px;
 }
 
 .series__logo {
   background-color: $series-background-color;
-  padding: 17px 0px 16px;
-  text-align: right;
-  width: percentage-to-pixels(45%);
 }
 
-.series__push {
+.series__logo--wrapper {
+  padding: 25px 0px 10px 0px;
+  text-align: center;
+  vertical-align: top;
+}
+
+.series__logo--image {
+  width: 330px;
+  height: 32px;
+  border: 0px;
+}
+
+.series__banner {
   background-color: $series-background-color;
-  width: percentage-to-pixels(5%);
 }

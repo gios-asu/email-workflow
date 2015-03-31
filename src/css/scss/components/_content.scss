@@ -1,63 +1,71 @@
 .content {
-  width: percentage-to-pixels(100%);
+  background: $content-background-color;
+  width: percentage-to-pixels(100%)-2;
 }
 
 .content__headshot {
-  padding: 30px 0 0 30px;
+  background: $content-background-color;
+  padding: 20px 0 0 20px;
   vertical-align: top;
-  width: percentage-to-pixels(20%);
+  width: percentage-to-pixels(30%);
+}
+
+.content__headshot--image {
+  background-color: $content-background-color;
+  padding: 3px;
+  border: 1px solid $content-image-border-color;
 }
 
 .content__headlines {
+  background: $content-background-color;
   padding: 30px 0 0;
   vertical-align: top;
-  width: percentage-to-pixels(80%);
+  width: percentage-to-pixels(70%);
 }
 
 .content__headlines--headline {
   color: $content-head-font-color;
   font-family: $font-family;
-  font-size: 40px;
+  font-size: 22px;
   font-weight: bold;
-  letter-spacing: -2px;
+  letter-spacing: -1px;
   line-height: normal;
-  margin: 0 0 0 30px;
-  padding: 0;
+  margin: 0;
 }
 
 .content__headlines--title {
   font-style: italic;
   font-family: $font-family;
   color: $content-font-color;
-  font-size: 15px;
+  font-size: 16px;
+  letter-spacing: -1px;
   line-height: normal;
   font-weight: normal;
-  margin: 3px 0 10px 30px;
-  padding: 0;
+  margin: 3px 0 0;
 }
 
 .content__description {
+  background: $content-background-color;
+  font-size: 15px;
+  vertical-align: top;
+  color: $content-font-color;
+  line-height: normal;
+  padding: 15px 15px 10px 22px;
+  vertical-align: top;
+}
+
+.content__description--text * {
   color: $content-font-color;
   font-family: $font-family;
-  font-size: 13px;
+  color:#505050;
+  padding:0px;
+}
+
+.content__description--text p {
+  color: $content-font-color;
+  font-family: $font-family;
   font-style: normal;
   font-weight: normal;
   line-height: 18px;
-  margin: 0 25px 20px 30px;
-  padding: 0;
-}
-
-.content__description * {
-  color: $content-font-color;
-  font-family: $font-family;
-}
-
-.content__description p {
-  color: $content-font-color;
-  font-family: $font-family;
-  font-size: 13px;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 18px;
-  padding: 0;
+  font-size:15px;
 }

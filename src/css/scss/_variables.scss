@@ -4,41 +4,43 @@
 
 //@import "../../data/event.scss";
 
-$padding:       0px !default;
-$grey:          #f6f6f6 !default;
 $width:         580px !default;
 $br:            3px !default;
 $btn-br:        5px !default;
-$primary-color: #348eda !default;
 
 // ==========
 // Typography
 // ==========
-$font-family:   Arial, Helvetica, sans-serif !default;
+$font-family:   'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif !default;
 
 // ======
 // Colors
 // ======
+$background-color:                  #edf1e9 !default;
+$border-color:                      #c2d4b5 !default;
 $primary-accent-color:              #5d9732 !default;
 $primary-accent-font-color:         #fff !default;
 $secondary-accent-color:            #cfdec0 !default;
 
-$series-background-color:           $secondary-accent-color !default;
+$series-background-color:           #fff !default;
 $series-font-color:                 $primary-accent-color !default;
 
 $name-background-color:             $primary-accent-color !default;
 $name-font-color:                   $primary-accent-font-color !default;
 
-$content-font-color:                #505a63 !default;
+$content-background-color:          #fff !default;
+$content-font-color:                #505050 !default;
 $content-head-font-color:           #6a747c !default;
+$content-image-border-color:        $primary-accent-color !default;
 
-$information-background-color:      $primary-accent-color !default;
-$information-font-color:            $primary-accent-font-color !default;
-$information-rsvp-font-color:       #4f5557 !default;
-$information-rsvp-background-color: #ffb310 !default;
+$information-background-color:      #fff !default;
+$information-font-color:            #6f6f6f !default;
+$information-rsvp-font-color:       #fff !default;
+$information-rsvp-background-color: $primary-accent-color !default;
 
-$footer-background-color:           #cfdec0 !default;
+$footer-background-color:           #e7efe1 !default;
 $footer-font-color:                 #6a747c !default;
-$footer-directions-font-color:      #548d2b !default;
+$footer-link-color:                 #548d2b !default;
 
 $unsub-font-color:                  #6a747c !default;
+$unsub-link-color:                  #548d2b !default;
