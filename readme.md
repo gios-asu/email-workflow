@@ -78,3 +78,7 @@ See the output HTML in the `dist` folder. Open them and preview it the browser.
 <img src="http://i.imgur.com/WoWgRxm.gif" width="500">
 
 Alternatively run `grunt agile`. This will check for any changes you make to your .scss and .hbs templates, then automatically run the tasks. Saves you having to run grunt every time.
+
+## Additional Reading
+
+For more on email design, do's and don'ts, and different email techniques, check out this [Email Design Guide](https://docs.google.com/document/d/1_A1B10ME_G-ncC36suRYl7aTU4PHhCHtDBB1Kzx8Bd4/edit?usp=sharing).
